@@ -1,11 +1,3 @@
-//
-//  EmojiArtDocumentView.swift
-//  Emoji Art
-//
-//  Created by CS193p Instructor on 5/8/23.
-//  Copyright (c) 2023 Stanford University
-//
-
 import SwiftUI
 
 struct EmojiArtDocumentView: View {
@@ -71,10 +63,10 @@ struct EmojiArtDocumentView: View {
                                       document.removeEmoji(withID: emoji.id)
                                  }
                                  .alignmentGuide(.trailing) { _ in
-                                     geometry.size.width // Adjust the padding as per your needs
+                                     geometry.size.width 
                                  }
                                  .alignmentGuide(.top) { _ in
-                                     geometry.size.height  // Adjust the padding as per your needs
+                                     geometry.size.height  
                                  }
                          }
                          
@@ -102,8 +94,6 @@ struct EmojiArtDocumentView: View {
             }
     }
     
-    
-    // TODO: change if else to use gesture state to control
     private func dragGesture(with emoji: Emoji) -> some Gesture {
         if !selectedEmoji.contains(emoji.id){
             DragGesture()
